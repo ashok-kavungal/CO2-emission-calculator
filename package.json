@@ -1,0 +1,15 @@
+{
+  "name": "sap_assignment",
+  "version": "1.0.0",
+  "description": "A node.js cli tool to calculate co2 amount emitted",
+  "main": "./app/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashok Kavungal",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "yargs": "^16.0.3"
+  }
+}
