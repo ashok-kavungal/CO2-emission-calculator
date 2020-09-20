@@ -23,7 +23,7 @@ class CoCalculator {
     }
 
     fetchRate(data, vehicle) {
-        return new Promise((resolve) => {
+        return new Promise((resolve,reject) => {
 
             let found = false;
             let recursion = 0;
@@ -43,7 +43,7 @@ class CoCalculator {
                 }
                 recursion -= 1;
                 if (recursion === 0 && !found) {
-                    console.log('The vehicle not found in data list')
+                    reject('The vehicle not found in data list.');
                 }
             }
 
@@ -54,6 +54,7 @@ class CoCalculator {
     async calculate() {
         let data = emissionList.data;
         let rate = await this.fetchRate(data, this.vehicle);
+        console.log('the return value of rate rejct is '+ rate);
         let result = this.getResult(rate);
         return result;
     }
