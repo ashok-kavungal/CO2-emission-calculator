@@ -8,6 +8,7 @@ A command line tool build using [node.js](https://nodejs.org/en/) that returns t
 
 
 ## Usage
+=======
 
 Init project:
 ```
@@ -22,6 +23,7 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 ```
 
 ### allowed flags and argument types
+=======
 
 
 **-- transportation-method**  - The flag accepts a string representing the transportation method.<br>
@@ -34,6 +36,7 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 
 
 ### examples of using command and expected results
+=======
 
 
 ```bash
