@@ -5,8 +5,8 @@ if(input.commands){
     (async () => {
         const validInput = input.commands.argv;
         const emisson = new emissonCalculator(validInput);
-        const finalresult = await emisson.calculate();
-        console.log(finalresult)
+        const finalResult = await emisson.calculate();
+        console.log(finalResult)
     })().catch(err => {
         console.error(err);
     });   

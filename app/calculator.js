@@ -11,6 +11,8 @@ class CoCalculator {
     roundValue = n => Math.round(n * 10) / 10;
 
     getResult = rate => {
+        //use the fetched rate and calculates the final emission value
+        // returns the final string as result
         let outputval = this.distUnit === 'Km' ?
             this.outputUnit === 'Kg' ?
             (this.roundValue(this.distance * (rate / 1000)) + 'Kg') :
@@ -18,11 +20,14 @@ class CoCalculator {
             this.outputUnit === 'Kg' ?
             (this.roundValue(this.distance * (rate / 1000000)) + 'Kg') :
             (this.roundValue(this.distance * (rate / 1000)) + 'g')
-        let result = `Your trip caused ${outputval} of CO2-equivalent.`
+        const result = `Your trip caused ${outputval} of CO2-equivalent.`
         return result;
     }
 
     fetchRate(data, vehicle) {
+        //search the nested object using an recursive fn
+        //resolves the emission value in gram per km if vehicle is found in list
+        //rejects if the transportation method is not found in data list
         return new Promise((resolve,reject) => {
 
             let found = false;
@@ -46,15 +51,14 @@ class CoCalculator {
                     reject('The vehicle not found in data list.');
                 }
             }
-
             searchKeyvalue(data, vehicle);
         });
     }
 
     async calculate() {
-        let data = emissionList.data;
-        let rate = await this.fetchRate(data, this.vehicle);
-        let result = this.getResult(rate);
+        const data = emissionList.data;
+        const rate = await this.fetchRate(data, this.vehicle);
+        const result = this.getResult(rate);
         return result;
     }
 }

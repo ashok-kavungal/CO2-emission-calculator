@@ -39,6 +39,7 @@ exports.commands = require('yargs')
     }
   })
   .check((argv) => {
+    //checks only flags are passed, no commands are allowed as input.
     const additionalargs = argv._
     if (additionalargs.length > 0) {
       throw new Error("invalid command found.")
@@ -46,8 +47,8 @@ exports.commands = require('yargs')
     return true;
   })
   .check((argv) => {
-    let transportationMethod = argv['transportation-method'];
-    let distance = argv['distance'];
+    const transportationMethod = argv['transportation-method'];
+    const distance = argv['distance'];
 
     if (transportationMethod === '') {
       throw new Error(" argument passed to --transportation-method flag is empty string");
@@ -58,6 +59,7 @@ exports.commands = require('yargs')
     return true;
   })
   .check((argv) => {
+    //checks the passed flags is a subset of previously set allowd flag.
     const passedArgs = Object.keys(argv).filter(el => (el !== '_' && el !== '$0'));
     const isAllowed = passedArgs.every(val => allowed.includes(val));
     if (!isAllowed) {
