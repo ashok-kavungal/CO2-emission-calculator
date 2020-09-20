@@ -25,17 +25,11 @@ $ cd AssignmentTask/app
 $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3 sample3
 ```
 
-### allowed flags and argument types
-```
--- transportation-method  - The flag accepts a string representing the transportation method.
--- distance  - The flag accepst a number indicating the distance in Km or m. By default the unit of distance is assumed to be Km if not set externaly.
--- unit-of-distance  - The falg sets the unit of distance. The accepted arguments are 'Km'-(kilometers) and m - (meters).
--- output  - The flag tells the app in which unit should the output be printed. By default the unit of output is Kg. The accepted arguments are 'Kg' - (kilogram) and 'g' - (gram)
-
-``
-
 ### examples of using command and expected results
-```
+
+
+```bash
+
 $ ./co2-calculator --transportation-method medium-diesel-car --distance 15 --unit-of-distance km
 Your trip caused 2.6kg of CO2-equivalent.
 
@@ -52,4 +46,4 @@ $ ./co2-calculator --unit-of-distance=km --distance 15 --transportation-method=m
 Your trip caused 2.6kg of CO2-equivalent.
 
 
-``
+```
