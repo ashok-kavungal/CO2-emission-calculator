@@ -55,6 +55,11 @@ $ npm install
 $ cd AssignmentTask/app
 $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3 sample3
 ```
+## Run unit tests
+
+```
+$ npm run test
+```
 
 ## Allowed flags and argument types
 
