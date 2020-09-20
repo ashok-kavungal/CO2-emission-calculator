@@ -8,7 +8,7 @@ A command line tool build using [node.js](https://nodejs.org/en/) that returns t
 
 ## Requirements
 
-For development, you will need Node.js and a node global package,NPM installed in your environement.
+For development, you will need Node.js installed in your environement.
 
 ### Node
 - #### Node installation on Windows
@@ -89,3 +89,12 @@ $ ./co2-calculator --unit-of-distance=km --distance 15 --transportation-method=m
 Your trip caused 2.6kg of CO2-equivalent.
 
 ```
+
+## Useful links
+
+* [yargs](https://github.com/yargs/yargs)
+* [Jest](https://github.com/facebook/jest)
+* [Node](https://nodejs.org/docs/latest-v13.x/api/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+
