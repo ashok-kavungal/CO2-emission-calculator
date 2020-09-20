@@ -9,9 +9,9 @@ A command line tool build using [node.js](https://nodejs.org/en/) that returns t
 
 ## Usage
 
-Download the repository:
+Download and unzip the file:
 ```
-$ git clone https://github.com/ashok-kavungal/AssignmentTask.git
+$ unzip Kavungal.zip
 ```
 
 Init project:
@@ -19,11 +19,21 @@ Init project:
 $ cd AssignmentTask
 $ npm install
 ```
-Launch:
+## Launch
+
 ```
 $ cd AssignmentTask/app
 $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3 sample3
 ```
+
+### allowed flags and argument types
+
+
+**-- transportation-method**  - The flag accepts a string representing the transportation method.<br>
+**-- distance**  - The flag accepst a number indicating the distance in Km or m. By default the unit of distance is assumed to be Km if not set externaly.<br>
+**-- unit-of-distance**  - The falg sets the unit of distance. The accepted arguments are 'Km'-(kilometers) and m - (meters).<br>
+**-- output**  - The flag tells the app in which unit should the output be printed. By default the unit of output is Kg. The accepted arguments are 'Kg' - (kilogram) and 'g' - (gram)<br>
+
 
 ### examples of using command and expected results
 
@@ -44,6 +54,5 @@ Your trip caused 0.1kg of CO2-equivalent.
 
 $ ./co2-calculator --unit-of-distance=km --distance 15 --transportation-method=medium-diesel-car
 Your trip caused 2.6kg of CO2-equivalent.
-
 
 ```
