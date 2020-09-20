@@ -59,13 +59,13 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 ## Allowed flags and argument types
 
 
-**-- transportation-method**  - The flag accepts a string representing the transportation method.<br>
+**-- transportation-method**  - The flag accepts a <ins>string</ins> representing the transportation method.<br>
 
-**-- distance**  - The flag accepts a number indicating the distance. <br>
+**-- distance**  - The flag accepts a <ins>number</ins> indicating the distance. <br>
 
-**-- unit-of-distance**  - By default the app uses the unit of distance is Km (kilometers) if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are 'Km'-(kilometers) and 'm'-(meters).<br>
+**-- unit-of-distance**  - By <ins>default</ins> the app uses the unit of distance is <ins>Km (kilometers)</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'Km'-(kilometers) and 'm'-(meters)</ins>.<br>
 
-**-- output**  - The flag tells the app in which unit should the output be printed. By default the unit of output is 'Kg'. The accepted arguments are 'Kg'-(kilogram) and 'g'-(gram)<br>
+**-- output**  - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is 'Kg'. The accepted arguments are <ins>'Kg'-(kilogram) and 'g'-(gram)</ins><br>
 
 
 ## Examples of using command and expected results
