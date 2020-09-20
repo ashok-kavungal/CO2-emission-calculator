@@ -67,6 +67,8 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 
 **-- output**  - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is 'Kg'. The accepted arguments are <ins>'Kg'-(kilogram) and 'g'-(gram)</ins><br>
 
+The app validates the input flags and arguments using yargs and throws an error if invalid flags and arguments are passed.
+
 
 ## Examples of using command and expected results
 
@@ -87,6 +89,9 @@ Your trip caused 0.1kg of CO2-equivalent.
 
 $ ./co2-calculator --unit-of-distance=km --distance 15 --transportation-method=medium-diesel-car
 Your trip caused 2.6kg of CO2-equivalent.
+
+$ ./co2-calculator --unit-of-distance=km --distance 15 --transportation-method=somemethodnotfound
+The vehicle not found in data list.
 
 ```
 
