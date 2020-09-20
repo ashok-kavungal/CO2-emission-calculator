@@ -8,7 +8,7 @@ A command line tool build using [node.js](https://nodejs.org/en/) that returns t
 
 
 ## Usage
-=======
+
 
 Init project:
 ```
@@ -22,8 +22,7 @@ $ cd AssignmentTask/app
 $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3 sample3
 ```
 
-### allowed flags and argument types
-=======
+## Allowed flags and argument types
 
 
 **-- transportation-method**  - The flag accepts a string representing the transportation method.<br>
@@ -35,8 +34,7 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 **-- output**  - The flag tells the app in which unit should the output be printed. By default the unit of output is 'Kg'. The accepted arguments are 'Kg'-(kilogram) and 'g'-(gram)<br>
 
 
-### examples of using command and expected results
-=======
+## Examples of using command and expected results
 
 
 ```bash
