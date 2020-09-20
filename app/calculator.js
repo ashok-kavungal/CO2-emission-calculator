@@ -54,7 +54,6 @@ class CoCalculator {
     async calculate() {
         let data = emissionList.data;
         let rate = await this.fetchRate(data, this.vehicle);
-        console.log('the return value of rate rejct is '+ rate);
         let result = this.getResult(rate);
         return result;
     }
