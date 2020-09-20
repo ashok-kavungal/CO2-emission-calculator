@@ -66,11 +66,11 @@ $ npm run test
 
 **-- transportation-method**  - The flag accepts a <ins>string</ins> representing the transportation method.<br>
 
-**-- distance**  - The flag accepts a <ins>number</ins> indicating the distance. <br>
+**-- distance**  - The flag accepts a <ins>number</ins> indicating the distance travelled. <br>
 
-**-- unit-of-distance**  - By <ins>default</ins> the app uses the unit of distance is <ins>Km (kilometers)</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'Km'-(kilometers) and 'm'-(meters)</ins>.<br>
+**-- unit-of-distance**  - By <ins>default</ins> the the unit of distance is <ins>Kilometers</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'km'-(kilometers) and 'm'-(meters)</ins>.<br>
 
-**-- output**  - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is 'Kg'. The accepted arguments are <ins>'Kg'-(kilogram) and 'g'-(gram)</ins><br>
+**-- output**  - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is <ins>kilogram</ins>. The accepted arguments are <ins>'kg' for kilogram and 'g' for grams</ins><br>
 
 The app validates the input flags and arguments using yargs and throws an error if invalid flags and arguments are passed.
 

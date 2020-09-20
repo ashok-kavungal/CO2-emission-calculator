@@ -13,12 +13,12 @@ class CoCalculator {
     getResult = rate => {
         //use the fetched rate and calculates the final emission value
         // returns the final string as result
-        let outputval = this.distUnit === 'Km' ?
-            this.outputUnit === 'Kg' ?
-            (this.roundValue(this.distance * (rate / 1000)) + 'Kg') :
+        let outputval = this.distUnit === 'km' ?
+            this.outputUnit === 'kg' ?
+            (this.roundValue(this.distance * (rate / 1000)) + 'kg') :
             (this.roundValue(this.distance * rate) + 'g') :
-            this.outputUnit === 'Kg' ?
-            (this.roundValue(this.distance * (rate / 1000000)) + 'Kg') :
+            this.outputUnit === 'kg' ?
+            (this.roundValue(this.distance * (rate / 1000000)) + 'kg') :
             (this.roundValue(this.distance * (rate / 1000)) + 'g')
         const result = `Your trip caused ${outputval} of CO2-equivalent.`
         return result;

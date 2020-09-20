@@ -24,17 +24,17 @@ exports.commands = require('yargs')
   })
   .options({
     'unit-of-distance': {
-      default: 'Km',
-      choices: ['Km', 'm'],
-      describe: 'The Unit of input distance in either Km or m',
+      default: 'km',
+      choices: ['km', 'm'],
+      describe: 'The Unit of input distance in either km or m',
       type: 'string'
     }
   })
   .options({
     'output': {
-      default: 'Kg',
-      choices: ['Kg', 'g'],
-      describe: 'The Unit of CO2 in output Kg or g',
+      default: 'kg',
+      choices: ['kg', 'g'],
+      describe: 'The Unit of CO2 in output kg or g',
       type: 'string'
     }
   })
