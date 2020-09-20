@@ -9,11 +9,6 @@ A command line tool build using [node.js](https://nodejs.org/en/) that returns t
 
 ## Usage
 
-Download and unzip the file:
-```
-$ unzip Kavungal.zip
-```
-
 Init project:
 ```
 $ cd AssignmentTask
@@ -30,9 +25,12 @@ $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3
 
 
 **-- transportation-method**  - The flag accepts a string representing the transportation method.<br>
-**-- distance**  - The flag accepst a number indicating the distance in Km or m. By default the unit of distance is assumed to be Km if not set externaly.<br>
-**-- unit-of-distance**  - The falg sets the unit of distance. The accepted arguments are 'Km'-(kilometers) and m - (meters).<br>
-**-- output**  - The flag tells the app in which unit should the output be printed. By default the unit of output is Kg. The accepted arguments are 'Kg' - (kilogram) and 'g' - (gram)<br>
+
+**-- distance**  - The flag accepts a number indicating the distance. <br>
+
+**-- unit-of-distance**  - By default the app uses the unit of distance is Km (kilometers) if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are 'Km'-(kilometers) and 'm'-(meters).<br>
+
+**-- output**  - The flag tells the app in which unit should the output be printed. By default the unit of output is 'Kg'. The accepted arguments are 'Kg'-(kilogram) and 'g'-(gram)<br>
 
 
 ### examples of using command and expected results
