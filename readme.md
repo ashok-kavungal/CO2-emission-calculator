@@ -1,4 +1,4 @@
-# CO2 emission calculator (Development Challenge)
+# CO2 emission calculator
 
 
 Description
