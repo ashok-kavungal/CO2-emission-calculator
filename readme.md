@@ -67,7 +67,7 @@ $ npm run test
 
 **-- distance** - The flag accepts a <ins>number</ins> indicating the distance travelled. <br>
 
-**-- unit-of-distance** - By <ins>default</ins> the the unit of distance is <ins>Kilometers</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'km'-(kilometers) and 'm'-(meters)</ins>.<br>
+**-- unit-of-distance** - By <ins>default</ins> the the unit of distance is <ins>Kilometers</ins> if not set externaly. This flag allows user to sets the unit of distance.The accepted arguments are <ins>'km'-(kilometers) and 'm'-(meters)</ins>.<br>
 
 **-- output** - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is <ins>kilogram</ins>. The accepted arguments are <ins>'kg' for kilogram and 'g' for grams</ins><br>
 
