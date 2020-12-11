@@ -26,38 +26,29 @@ class CoCalculator {
   };
 
   fetchRate(data, vehicle) {
-    //search the nested object using an recursive fn
-    //resolves the emission value in gram per km if vehicle is found in list
-    //rejects if the transportation method is not found in data list
     return new Promise((resolve, reject) => {
-      let found = false;
-      let recursion = 0;
-
-      const searchKeyvalue = (obj, key) => {
-        recursion += 1;
-        for (let prop in obj) {
-          if (found) break;
-          if (typeof obj[prop] == 'object') {
-            searchKeyvalue(obj[prop], key);
-          } else {
-            if (prop == key) {
-              found = true;
-              resolve(obj[key]);
+      function getKeyval(Obj, key) {
+        let result = null;
+        for (var prop in Obj) {
+          if (prop == key) {
+            resolve(Obj[prop]);
+          }
+          if (Obj[prop] instanceof Object) {
+            result = getKeyval(Obj[prop], key);
+            if (result) {
+              break;
             }
           }
         }
-        recursion -= 1;
-        if (recursion === 0 && !found) {
-          reject('The vehicle not found in data list.');
-        }
-      };
-      searchKeyvalue(data, vehicle);
+        return result;
+      }
+      getKeyval(data, vehicle);
+      reject('The vehicle not found in data list.');
     });
   }
 
   async calculate() {
     const rate = await this.fetchRate(data, this.vehicle);
-    console.log('the rate is :' + rate);
     const result = this.getResult(rate);
     return result;
   }
