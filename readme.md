@@ -1,16 +1,15 @@
 # CO2 emission calculator
 
+# Description
 
-Description
-=======
-
-A command line tool build using [node.js](https://nodejs.org/en/) that returns the amount of CO2-equivalent that will be caused when traveling a given distance using a given transportation method.The project uses [yargs](http://yargs.js.org/) for parsing the CLI commands and [jest](https://jestjs.io/en/) for writing unit tests. 
+A command line tool build using [node.js](https://nodejs.org/en/) that returns the amount of CO2-equivalent that will be caused when traveling a given distance using a given transportation method.The project uses [yargs](http://yargs.js.org/) for parsing the CLI commands and [jest](https://jestjs.io/en/) for writing unit tests.
 
 ## Requirements
 
 For development, you will need Node.js installed in your environement.
 
 ### Node
+
 - #### Node installation on Windows
 
 Just go on [official Node.js website](https://nodejs.org/) and download the installer.
@@ -40,21 +39,22 @@ If you need to update `npm`, you can make it using `npm`, After running the foll
 
 ---
 
-
 ## Usage
 
-
 Init project:
+
 ```
-$ cd AssignmentTask
+$ cd CO2-emission-calculator
 $ npm install
 ```
+
 ## Launch
 
 ```
-$ cd AssignmentTask/app
+$ cd CO2-emission-calculator/app
 $ node co2-calculator.js --exampleflag1 flag1 --exampleflag2 arg2 --exampleflag3 sample3
 ```
+
 ## Run unit tests
 
 ```
@@ -63,20 +63,17 @@ $ npm run test
 
 ## Allowed flags and argument types
 
+**-- transportation-method** - The flag accepts a <ins>string</ins> representing the transportation method.<br>
 
-**-- transportation-method**  - The flag accepts a <ins>string</ins> representing the transportation method.<br>
+**-- distance** - The flag accepts a <ins>number</ins> indicating the distance travelled. <br>
 
-**-- distance**  - The flag accepts a <ins>number</ins> indicating the distance travelled. <br>
+**-- unit-of-distance** - By <ins>default</ins> the the unit of distance is <ins>Kilometers</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'km'-(kilometers) and 'm'-(meters)</ins>.<br>
 
-**-- unit-of-distance**  - By <ins>default</ins> the the unit of distance is <ins>Kilometers</ins> if not set externaly. This falg allows user to sets the unit of distance.The accepted arguments are <ins>'km'-(kilometers) and 'm'-(meters)</ins>.<br>
-
-**-- output**  - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is <ins>kilogram</ins>. The accepted arguments are <ins>'kg' for kilogram and 'g' for grams</ins><br>
+**-- output** - The flag tells the app in which unit should the output be printed. By <ins>default</ins> the unit of output is <ins>kilogram</ins>. The accepted arguments are <ins>'kg' for kilogram and 'g' for grams</ins><br>
 
 The app validates the input flags and arguments using yargs and throws an error if invalid flags and arguments are passed.
 
-
 ## Examples of using command and expected results
-
 
 ```bash
 
@@ -102,9 +99,7 @@ The vehicle not found in data list.
 
 ## Useful links
 
-* [yargs](https://github.com/yargs/yargs)
-* [Jest](https://github.com/facebook/jest)
-* [Node](https://nodejs.org/docs/latest-v13.x/api/)
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-
-
+- [yargs](https://github.com/yargs/yargs)
+- [Jest](https://github.com/facebook/jest)
+- [Node](https://nodejs.org/docs/latest-v13.x/api/)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
