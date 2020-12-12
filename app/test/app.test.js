@@ -2,7 +2,8 @@ const input = require('../cli');
 const emissonCalculator = require('../calculator');
 const emissionList = require('../data');
 
-test('Functional requirement 1', () => {
+test('Calculated the emmision for input command', () => {
+  //functional requirement 1
   const args = [
     '--transportation-method',
     'medium-diesel-car',
@@ -18,7 +19,8 @@ test('Functional requirement 1', () => {
   });
 });
 
-test('Functional requirement 2', () => {
+test('Unit of Distance is Km and output is Kg by Default', () => {
+  //Functional requirement 2
   const args = [
     '--transportation-method',
     'large-petrol-car',
@@ -32,7 +34,8 @@ test('Functional requirement 2', () => {
   });
 });
 
-test('Functional requirement 3', () => {
+test('Unit of Distance and output can be changed by using flags', () => {
+  //Functional requirement 3
   const args = [
     '--transportation-method',
     'train',
@@ -50,7 +53,8 @@ test('Functional requirement 3', () => {
   });
 });
 
-test('Functional requirement 4', () => {
+test('calculation logic works for unit of distance in meters and output unit in Kg', () => {
+  //functional requirement 4
   const args = [
     '--transportation-method',
     'train',
@@ -68,7 +72,7 @@ test('Functional requirement 4', () => {
   });
 });
 
-test('Functional requirement 5', () => {
+test('calculation logic works for unit of distance in Km and output unit in grams', () => {
   const args = [
     '--transportation-method',
     'medium-diesel-car',
@@ -84,7 +88,7 @@ test('Functional requirement 5', () => {
   });
 });
 
-it('Transportation method not found', async () => {
+it('ouputs vehicle not found, if didnt found in data.json file', async () => {
   const args = [
     '--transportation-method',
     'somemethod',
