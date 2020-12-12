@@ -26,6 +26,7 @@ class CoCalculator {
   };
 
   fetchRate(data, vehicle) {
+    //using promise to show real-life scenario (like a database)
     return new Promise((resolve, reject) => {
       function getKeyval(Obj, key) {
         let result = null;
