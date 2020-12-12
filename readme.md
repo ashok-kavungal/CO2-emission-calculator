@@ -41,6 +41,8 @@ If you need to update `npm`, you can make it using `npm`, After running the foll
 
 ## Usage
 
+Unzip the file CO2-emission-calculator.zip
+
 Init project:
 
 ```
