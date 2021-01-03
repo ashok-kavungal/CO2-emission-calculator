@@ -4,7 +4,7 @@ const allowed = [
   'distance',
   'unit-of-distance',
   'unitOfDistance',
-  'output'
+  'output',
 ];
 
 exports.commands = require('yargs')
@@ -12,38 +12,38 @@ exports.commands = require('yargs')
     'transportation-method': {
       demandOption: true,
       describe: 'A String value indicating transportation method',
-      type: 'string'
-    }
+      type: 'string',
+    },
   })
   .options({
-    'distance': {
+    distance: {
       demandOption: true,
-      describe: 'A String value indicating transportation method',
-      type: 'number'
-    }
+      describe: 'A Number indicating distance',
+      type: 'number',
+    },
   })
   .options({
     'unit-of-distance': {
       default: 'km',
       choices: ['km', 'm'],
       describe: 'The Unit of input distance in either km or m',
-      type: 'string'
-    }
+      type: 'string',
+    },
   })
   .options({
-    'output': {
+    output: {
       default: 'kg',
       choices: ['kg', 'g'],
       describe: 'The Unit of CO2 in output kg or g',
-      type: 'string'
-    }
+      type: 'string',
+    },
   })
   .check((argv) => {
     //checks only flags are passed, no commands are allowed as input.
-    const additionalargs = argv._
+    const additionalargs = argv._;
     if (additionalargs.length > 0) {
-      throw new Error("invalid command found.")
-    };
+      throw new Error('invalid command found.');
+    }
     return true;
   })
   .check((argv) => {
@@ -51,19 +51,23 @@ exports.commands = require('yargs')
     const distance = argv['distance'];
 
     if (transportationMethod === '') {
-      throw new Error(" argument passed to --transportation-method flag is empty string");
-    };
+      throw new Error(
+        ' argument passed to --transportation-method flag is empty string'
+      );
+    }
     if (!(typeof distance === 'number')) {
-      throw new Error(" argument passed to --distance flag is not a number")
-    };
+      throw new Error(' argument passed to --distance flag is not a number');
+    }
     return true;
   })
   .check((argv) => {
     //checks the passed flags is a subset of previously set allowd flag.
-    const passedArgs = Object.keys(argv).filter(el => (el !== '_' && el !== '$0'));
-    const isAllowed = passedArgs.every(val => allowed.includes(val));
+    const passedArgs = Object.keys(argv).filter(
+      (el) => el !== '_' && el !== '$0'
+    );
+    const isAllowed = passedArgs.every((val) => allowed.includes(val));
     if (!isAllowed) {
-      throw new Error("unidentified arguments passed.")
-    };
+      throw new Error('unidentified arguments passed.');
+    }
     return true;
   });
